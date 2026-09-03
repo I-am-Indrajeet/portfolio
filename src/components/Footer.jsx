@@ -38,10 +38,10 @@ function ContactItem({ icon: Icon, children, href }) {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
+    <footer id="contact" aria-labelledby="contact-heading" className="relative overflow-hidden px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
       <div className="relative z-10 grid items-center gap-10 md:grid-cols-[1fr_1fr] lg:grid-cols-[.85fr_.75fr_1.25fr] lg:gap-12">
         <div>
-          <h2 className="max-w-[210px] font-display text-[39px] leading-[.87] tracking-[-.04em] text-zinc-100">LET’S WORK TOGETHER</h2>
+          <h2 id="contact-heading" className="max-w-[210px] font-display text-[39px] leading-[.87] tracking-[-.04em] text-zinc-100">LET’S WORK TOGETHER</h2>
           <p className="mt-4 max-w-[220px] text-[9px] leading-[1.55] text-zinc-500">I’m currently open for new projects and collaborations. Let’s create something amazing that stands out.</p>
           <a href="mailto:indrajeetmahara07@gmail.com" className="mt-6 inline-flex items-center gap-2 rounded-full border border-red-700 px-3 py-2 text-[8px] font-bold uppercase tracking-wide text-red-500"><span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Available for freelance</a>
         </div>

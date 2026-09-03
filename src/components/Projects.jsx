@@ -137,8 +137,8 @@ export default function Projects() {
   const goNext = () => setActiveIndex((current) => Math.min(maxIndex, current + 1))
 
   return (
-    <section id="projects" className="border-b border-white/10 px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
-      <SectionHeading action={`${projects.length} live projects`}>SELECTED PROJECTS</SectionHeading>
+    <section id="projects" aria-labelledby="projects-heading" className="border-b border-white/10 px-5 py-10 sm:px-8 lg:px-12 lg:py-12">
+      <SectionHeading id="projects-heading" action={`${projects.length} live projects`}>SELECTED PROJECTS</SectionHeading>
 
       <div className="relative">
         <div className="mb-4 flex items-center justify-end gap-2">

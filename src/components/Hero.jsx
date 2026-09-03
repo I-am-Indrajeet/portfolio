@@ -104,9 +104,9 @@ export default function Hero() {
         <div className="max-w-[250px]">
           <p className="font-script text-[31px] leading-none text-white">Hello, I’m</p>
           <h1 className="mt-1 font-display text-[44px] leading-[.82] tracking-[-0.04em] text-zinc-100 sm:text-[56px]">indrajeet<br />mahara</h1>
-          <p className="mt-3 text-[9px] font-bold uppercase tracking-[.09em] text-red-600">Web Designer &<br />UI/UX Creator</p>
+          <p className="mt-3 text-[9px] font-bold uppercase tracking-[.09em] text-red-600">Web Designer &<br />React Developer</p>
           <p className="mt-4 max-w-[205px] text-[10px] leading-[1.55] text-zinc-400">
-            I design and build stylish, user-focused web experiences that combine creativity with strategy. Passionate about clean design, smooth interactions, and details that make a difference.
+            I’m a Kathmandu-based web designer and React developer creating stylish, user-focused websites and UI/UX experiences that combine creativity with strategy.
           </p>
           <div className="mt-5 flex items-center gap-2 text-[8px] font-semibold uppercase tracking-wide text-zinc-300">
             <Globe2 size={12} className="text-red-600" /> Available worldwide

@@ -40,7 +40,7 @@ const process = [
 function EducationAndSkills() {
   return (
     <div>
-      <SectionHeading>EDUCATION &amp; SKILLS</SectionHeading>
+      <SectionHeading id="about-heading">EDUCATION &amp; SKILLS</SectionHeading>
       <Eyebrow className="text-red-600">Education</Eyebrow>
       <div className="mt-3 space-y-4 border-b border-white/10 pb-5">
         {education.map((item) => (
@@ -114,7 +114,7 @@ function QuoteBlock() {
 
 export default function Credentials() {
   return (
-    <section className="grid gap-10 border-b border-white/10 px-5 py-10 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.1fr_1.2fr_.72fr] lg:gap-10 lg:px-12 lg:py-14">
+    <section id="about" aria-labelledby="about-heading" className="grid gap-10 border-b border-white/10 px-5 py-10 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.1fr_1.2fr_.72fr] lg:gap-10 lg:px-12 lg:py-14">
       <EducationAndSkills />
       <WorkProcess />
       <QuoteBlock />
