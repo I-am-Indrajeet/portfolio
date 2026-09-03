@@ -55,6 +55,10 @@ export default function Footer() {
           <img
             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=90"
             alt="Laptop displaying digital work"
+            width="1000"
+            height="667"
+            loading="lazy"
+            decoding="async"
             className="h-full min-h-[220px] w-full object-cover opacity-80 [mask-image:linear-gradient(to_right,transparent_0%,black_14%,black_86%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_14%,black_86%,transparent_100%)]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-[#080808]" />
@@ -65,7 +69,7 @@ export default function Footer() {
       </div>
       <div className="relative z-10 mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-[8px] text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
         <span>© 2026 indrajeet mahara. all rights reserved.</span>
-        <div className="flex gap-4"><a href="https://github.com/I-am-Indrajeet" target="_blank" rel="noreferrer" aria-label="GitHub"><GithubIcon /></a><a href="#" aria-label="Instagram"><InstagramIcon /></a><a href="#" aria-label="LinkedIn"><LinkedinIcon /></a></div>
+        <div className="flex gap-4"><a href="https://github.com/I-am-Indrajeet" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a></div>
       </div>
     </footer>
   )

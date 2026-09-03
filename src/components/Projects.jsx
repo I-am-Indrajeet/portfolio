@@ -69,7 +69,7 @@ function getSlidesPerView(width) {
 
 export function ProjectCard({ project }) {
   return (
-    <a href={project.link} target="_blank" rel="noreferrer" className="group block h-full">
+    <a href={project.link} target="_blank" rel="noopener noreferrer" className="group block h-full" aria-label={`${project.title} project — ${project.category}`}>
       <div className="relative aspect-[1.52] overflow-hidden border border-white/8 bg-gradient-to-br from-[#121212] via-[#090909] to-[#151515] p-5 sm:p-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_15%,rgba(219,16,27,0.22),transparent_42%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.04)_0%,transparent_45%)]" />

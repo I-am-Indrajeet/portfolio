@@ -76,7 +76,7 @@ function HeroStat({ number, label }) {
 
 export default function Hero() {
   return (
-    <section className="hero-grid relative isolate min-h-[720px] overflow-hidden border-b border-white/10 px-5 pb-10 pt-5 sm:min-h-[820px] sm:px-8 lg:min-h-[760px] lg:px-12 xl:min-h-[850px]">
+    <section id="home" aria-labelledby="hero-heading" className="hero-grid relative isolate min-h-[720px] overflow-hidden border-b border-white/10 px-5 pb-10 pt-5 sm:min-h-[820px] sm:px-8 lg:min-h-[760px] lg:px-12 xl:min-h-[850px]">
       <div className="relative z-20 flex items-start justify-between">
         <a href="#" className="max-w-18 text-[8px] font-bold uppercase leading-[1.05] tracking-tight text-red-600">
           Web Designer<br />Digital Creator
@@ -94,7 +94,11 @@ export default function Hero() {
       <div className="absolute left-1/2 top-[11rem] z-10 flex h-[440px] w-[300px] -translate-x-1/2 items-end justify-center sm:top-[9rem] sm:h-[560px] sm:w-[390px] lg:top-[7.5rem] lg:h-[650px] lg:w-[455px]">
         <img
           src="/hero_section_no_bg.webp"
-          alt="Portrait of indrajeet mahara"
+          alt="Portrait of Indrajeet Mahara, Kathmandu web designer and React developer"
+          width="1441"
+          height="1455"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-auto max-w-none object-contain object-bottom"
         />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#080808] to-transparent" />
@@ -103,7 +107,7 @@ export default function Hero() {
       <div className="relative z-20 mt-[25rem] grid gap-10 sm:mt-[29rem] sm:grid-cols-[1fr_auto] lg:mt-[20.5rem] lg:grid-cols-[250px_1fr_205px] lg:items-end">
         <div className="max-w-[250px]">
           <p className="font-script text-[31px] leading-none text-white">Hello, I’m</p>
-          <h1 className="mt-1 font-display text-[44px] leading-[.82] tracking-[-0.04em] text-zinc-100 sm:text-[56px]">indrajeet<br />mahara</h1>
+          <h1 id="hero-heading" className="mt-1 font-display text-[44px] leading-[.82] tracking-[-0.04em] text-zinc-100 sm:text-[56px]">indrajeet<br />mahara</h1>
           <p className="mt-3 text-[9px] font-bold uppercase tracking-[.09em] text-red-600">Web Designer &<br />React Developer</p>
           <p className="mt-4 max-w-[205px] text-[10px] leading-[1.55] text-zinc-400">
             I’m a Kathmandu-based web designer and React developer creating stylish, user-focused websites and UI/UX experiences that combine creativity with strategy.
