@@ -93,7 +93,7 @@ export default function Hero() {
       </div>
       <div className="absolute left-1/2 top-[11rem] z-10 flex h-[440px] w-[300px] -translate-x-1/2 items-end justify-center sm:top-[9rem] sm:h-[560px] sm:w-[390px] lg:top-[7.5rem] lg:h-[650px] lg:w-[455px]">
         <img
-          src="/hero_section_no_bg.png"
+          src="/hero_section_no_bg.webp"
           alt="Portrait of indrajeet mahara"
           className="h-full w-auto max-w-none object-contain object-bottom"
         />
