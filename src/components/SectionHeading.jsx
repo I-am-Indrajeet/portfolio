@@ -1,19 +1,20 @@
-import { ArrowUpRight } from 'lucide-react'
-
-export function Eyebrow({ children, className = '' }) {
-  return <p className={`text-[9px] font-semibold uppercase tracking-[0.12em] text-zinc-500 ${className}`}>{children}</p>
+import { ArrowUpRight } from "lucide-react";
+export function Eyebrow({ children }) {
+  return <p className="eyebrow">{children}</p>;
 }
-
-export default function SectionHeading({ children, action, id }) {
+export default function SectionHeading({ children, number, link, label }) {
   return (
-    <div className="mb-5 flex items-center gap-4">
-      <h2 id={id} className="shrink-0 text-[14px] font-bold tracking-[-.02em] text-zinc-100">{children}</h2>
-      <div className="h-px flex-1 bg-white/15" />
-      {action && (
-        <a href="#projects" className="hidden items-center gap-2 text-[8px] font-semibold uppercase tracking-wide text-zinc-300 sm:flex">
-          {action} <ArrowUpRight size={13} />
+    <div className="section-heading">
+      <div>
+        <Eyebrow>{number}</Eyebrow>
+        <h2>{children}</h2>
+      </div>
+      {link && (
+        <a className="text-link" href={link}>
+          {label}
+          <ArrowUpRight size={18} />
         </a>
       )}
     </div>
-  )
+  );
 }
