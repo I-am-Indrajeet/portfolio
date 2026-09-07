@@ -1,4 +1,10 @@
-import { site, pages, services, projects } from "../data/site.js";
+import {
+  site,
+  pages,
+  services,
+  projects,
+  localLandingPages,
+} from "../data/site.js";
 const escape = (value) =>
   String(value).replace(
     /[&<>"']/g,
@@ -14,10 +20,17 @@ export function schemaFor(page) {
     "@id": site.origin + "/#person",
     name: site.name,
     url: site.origin + "/",
-    jobTitle: "Web Designer and Developer",
+    jobTitle: "Web Designer and Website Developer",
     image: site.origin + "/hero_section.webp",
     email: site.email,
     telephone: site.phone,
+    worksFor: { "@id": site.origin + "/#professional-service" },
+    knowsAbout: [
+      "Web design",
+      "Website development",
+      "E-commerce websites",
+      "Technical SEO",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kathmandu",
@@ -43,8 +56,31 @@ export function schemaFor(page) {
     about: { "@id": person["@id"] },
     inLanguage: "en",
   };
+  const professionalService = {
+    "@type": "ProfessionalService",
+    "@id": site.origin + "/#professional-service",
+    name: "Indrajeet Mahara Web Design & Development",
+    url: site.origin + "/",
+    image: site.origin + "/hero_section.webp",
+    description:
+      "Web design and website development for businesses in Kathmandu and across Nepal.",
+    priceRange: "NPR 35,000+",
+    telephone: site.phone,
+    email: site.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kathmandu",
+      addressCountry: "NP",
+    },
+    areaServed: [
+      { "@type": "City", name: "Kathmandu" },
+      { "@type": "Country", name: "Nepal" },
+    ],
+    founder: { "@id": person["@id"] },
+    sameAs: [site.github],
+  };
   if (page.kind === "about") webPage.mainEntity = { "@id": person["@id"] };
-  const graph = [person, website, webPage];
+  const graph = [person, website, webPage, professionalService];
   if (page.path !== "/" && !page.noindex) {
     const ancestors = [pages[0]];
     if (page.kind === "service")
@@ -74,7 +110,22 @@ export function schemaFor(page) {
       description: s.description,
       url: canonical,
       provider: { "@id": person["@id"] },
-      areaServed: { "@type": "Country", name: "Nepal" },
+      areaServed: [
+        { "@type": "City", name: "Kathmandu" },
+        { "@type": "Country", name: "Nepal" },
+      ],
+    });
+  }
+  if (page.kind === "landing") {
+    const landing = localLandingPages.find((item) => item.slug === page.slug);
+    graph.push({
+      "@type": "FAQPage",
+      "@id": canonical + "#faq",
+      mainEntity: landing.faq.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
     });
   }
   if (page.kind === "case") {
