@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero-copy">
         <p className="eyebrow">
-          <span className="status-dot" /> FREELANCE WEB DEVELOPER · NEPAL
+          <span className="status-dot" /> WEB DESIGNER & DEVELOPER · KATHMANDU, NEPAL
         </p>
         <h1>
           Websites built
@@ -15,9 +15,9 @@ export default function Hero() {
           in your business.
         </h1>
         <p className="hero-description">
-          I’m Indrajeet, a web designer and developer in Kathmandu. I build
-          thoughtful websites that help the right people find you, understand
-          you and get in touch.
+          I’m Indrajeet, a web designer and website developer in Kathmandu,
+          Nepal. I build thoughtful websites that help the right people find
+          you, understand you and get in touch.
         </p>
         <div className="button-row">
           <Button>Discuss your website</Button>
