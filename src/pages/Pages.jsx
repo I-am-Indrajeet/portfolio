@@ -1,5 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
-import { services, projects, packages, site, money } from "../data/site.js";
+import {
+  services,
+  projects,
+  packages,
+  localLandingPages,
+  site,
+  money,
+} from "../data/site.js";
 import {
   Button,
   PageIntro,
@@ -297,6 +304,59 @@ export function Pricing() {
       <Callout
         title="Let’s put a number to your idea."
         cta="Request a website estimate"
+      />
+    </>
+  );
+}
+export function LocalLanding({ slug }) {
+  const page = localLandingPages.find((item) => item.slug === slug);
+  return (
+    <>
+      <PageIntro eyebrow={page.eyebrow} title={page.h1}>
+        {page.intro}
+      </PageIntro>
+      <div className="button-row">
+        <Button href="/contact/">Discuss your website</Button>
+        <Button href="/services/" secondary>
+          Explore services
+        </Button>
+      </div>
+      <section className="section split-section">
+        <div>
+          <Eyebrow>THE RIGHT SCALE FOR THE JOB</Eyebrow>
+          <h2>{page.fitTitle}</h2>
+        </div>
+        <p>{page.fitText}</p>
+      </section>
+      <section className="section">
+        <SectionHeading number="WHAT I CAN BUILD">
+          A clear scope, built with care.
+        </SectionHeading>
+        <div className="feature-grid">
+          {page.items.map(([title, text]) => (
+            <article key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section split-section">
+        <div>
+          <Eyebrow>LOCAL, DIRECT COLLABORATION</Eyebrow>
+          <h2>{page.localTitle}</h2>
+        </div>
+        <div>
+          <p>{page.localText}</p>
+          <a className="text-link" href="/website-cost-nepal/">
+            See website starting prices <ArrowUpRight size={18} />
+          </a>
+        </div>
+      </section>
+      <FAQ items={page.faq} title="Questions before you start?" />
+      <Callout
+        title="Have a website project in mind?"
+        text="Tell me what you are building, who it is for and what you need the site to do. I’ll help you decide the next sensible step."
       />
     </>
   );
