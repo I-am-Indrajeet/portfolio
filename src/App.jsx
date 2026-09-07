@@ -16,6 +16,7 @@ import {
   Services,
   Service,
   Pricing,
+  LocalLanding,
   Portfolio,
   CaseStudy,
   About,
@@ -86,6 +87,9 @@ export default function App({
       break;
     case "pricing":
       content = <Pricing />;
+      break;
+    case "landing":
+      content = <LocalLanding slug={page.slug} />;
       break;
     case "portfolio":
       content = <Portfolio />;
