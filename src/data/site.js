@@ -377,23 +377,129 @@ export const faqs = [
     "The build includes a technical foundation: crawlable pages, titles, descriptions, headings and a sitemap. Ongoing content, link building and search reporting are separate. Google rankings and inquiry volumes cannot be guaranteed.",
   ],
 ];
+export const localLandingPages = [
+  {
+    slug: "web-designer-kathmandu",
+    path: "/web-designer-kathmandu/",
+    label: "Web designer Kathmandu",
+    title: "Web Designer & Website Developer in Kathmandu, Nepal | Indrajeet Mahara",
+    description:
+      "Hire Indrajeet Mahara, a web designer and website developer in Kathmandu. Build a clear business website, redesign or custom web project for Nepal.",
+    eyebrow: "WEB DESIGNER IN KATHMANDU / NEPAL",
+    h1: "A web designer in Kathmandu who stays close to the work.",
+    intro:
+      "I work directly with businesses in Kathmandu and across Nepal to plan, design and develop websites that make the next step clear.",
+    fitTitle: "A good fit for a focused business website.",
+    fitText:
+      "You do not need a large agency process to make a useful website. You need someone who understands your goal, explains the scope and stays involved from the first page plan to launch.",
+    localTitle: "Based in Kathmandu. Available across Nepal.",
+    localText:
+      "I’m based in Pepsicola, Kathmandu, and work remotely with businesses across Nepal. We can begin by email or phone, review what you need and decide whether a starter website, redesign or custom build is the right first step.",
+    items: [
+      [
+        "Business website design",
+        "A clear, credible home for your services, location, work and inquiry path.",
+      ],
+      [
+        "Website redesign",
+        "A more useful structure, readable content and a mobile experience that reflects your current business.",
+      ],
+      [
+        "Custom web development",
+        "Focused tools and integrations planned around a real workflow rather than a list of fashionable features.",
+      ],
+    ],
+    faq: [
+      [
+        "Do you only work with Kathmandu businesses?",
+        "No. I’m based in Kathmandu and work with businesses across Nepal and internationally. Kathmandu clients can choose direct local collaboration or the same remote process.",
+      ],
+      [
+        "How much does a website cost?",
+        "Starter business websites begin at NPR 35,000. The final estimate depends on pages, content, design, integrations and whether your team needs content management.",
+      ],
+      [
+        "Can you improve an existing website?",
+        "Yes. A redesign can focus on structure, mobile usability, content clarity, visual identity or a full rebuild after reviewing the current site.",
+      ],
+    ],
+  },
+  {
+    slug: "website-development-nepal",
+    path: "/website-development-nepal/",
+    label: "Website development Nepal",
+    title: "Website Development in Nepal for Businesses | Indrajeet Mahara",
+    description:
+      "Website development in Nepal for businesses, hospitality, education and growing teams. Work directly with Kathmandu web developer Indrajeet Mahara.",
+    eyebrow: "WEBSITE DEVELOPMENT / NEPAL",
+    h1: "Website development shaped around your business.",
+    intro:
+      "From a first business website to an online store or focused web application, I help Nepal businesses choose a sensible scope and build it carefully.",
+    fitTitle: "A practical alternative to an oversized build.",
+    fitText:
+      "When you compare a freelancer with a website development company, the useful question is not only team size. Look at who owns the decisions, whether the scope is clear and who will still answer after launch.",
+    localTitle: "Built in Kathmandu for businesses across Nepal.",
+    localText:
+      "The work starts with your audience, content and day-to-day needs. That may lead to a five-page business website, a hospitality experience, an e-commerce plan or a custom interface. The proposal separates the first useful version from later ideas.",
+    items: [
+      [
+        "Business websites",
+        "Responsive pages for professional services, travel, hospitality, education and local businesses.",
+      ],
+      [
+        "E-commerce websites",
+        "A catalogue, shopping journey and order process scoped around your products, delivery and payment requirements.",
+      ],
+      [
+        "Custom web applications",
+        "Interactive tools, dashboards and integrations built around a defined workflow and acceptance criteria.",
+      ],
+      [
+        "Technical SEO foundation",
+        "Crawlable pages, useful metadata, structured content, internal links, sitemap and launch checks included in the build process.",
+      ],
+    ],
+    faq: [
+      [
+        "Do you work as a website development company?",
+        "I’m an independent web designer and developer, which means you work directly with the person planning and building the site. Larger team requirements can be assessed during scoping.",
+      ],
+      [
+        "What does website development cost in Nepal?",
+        "Starter business websites begin at NPR 35,000. Professional, travel, e-commerce and custom projects have different starting points because their content and functionality are different.",
+      ],
+      [
+        "Can you build for a business outside Kathmandu?",
+        "Yes. The process is designed to work remotely across Nepal: discuss the goal, confirm the scope, review the design, build the site and hand over ownership clearly.",
+      ],
+    ],
+  },
+];
 export const pages = [
   {
     path: "/",
     kind: "home",
     label: "Home",
-    title: "Freelance Web Developer in Nepal | Indrajeet Mahara",
+    title: "Web Designer in Kathmandu, Nepal | Indrajeet Mahara",
     description:
-      "Work directly with Indrajeet Mahara, a Kathmandu web designer and developer. Business websites from NPR 35,000. Explore work and request a free quote.",
+      "Indrajeet Mahara is a web designer and website developer in Kathmandu, Nepal. Build business websites, redesigns and custom web projects from NPR 35,000.",
   },
   {
     path: "/services/",
     kind: "services",
     label: "Services",
-    title: "Website Development Services in Nepal | Indrajeet Mahara",
+    title: "Website Development Services in Nepal | Web Designer Kathmandu",
     description:
-      "Business websites, website design, custom development and e-commerce in Nepal. Compare scopes, see relevant work and request a project estimate.",
+      "Website design and development services for businesses in Kathmandu and across Nepal. Compare business websites, redesigns, custom development and e-commerce scopes.",
   },
+  ...localLandingPages.map(({ slug, path, label, title, description }) => ({
+    path,
+    kind: "landing",
+    slug,
+    label,
+    title,
+    description,
+  })),
   ...services.map((s) => ({
     path: `/services/${s.slug}/`,
     kind: "service",
